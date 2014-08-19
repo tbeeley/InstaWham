@@ -1,9 +1,12 @@
 source 'https://rubygems.org'
 
-group :test do
+group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
 end
+
+gem 'paperclip', github: 'thoughtbot/paperclip'
+
 
 gem 'rspec-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
