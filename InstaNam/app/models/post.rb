@@ -17,8 +17,8 @@ class Post < ActiveRecord::Base
   def tag_list=(some_tags)
   	return if some_tags.empty?
 
-    some_tags.split(', ').each do |tag|
-  	self.tags << Tag.create(text: tag)
+    some_tags.split(', ').uniq.each do |tag|
+  	self.tags << Tag.find_or_create_by(text: tag)
     end
   end
 end
