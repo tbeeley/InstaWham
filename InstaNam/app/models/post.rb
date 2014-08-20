@@ -15,6 +15,8 @@ class Post < ActiveRecord::Base
   end
 
   def tag_list=(some_tags)
+  	return if some_tags.empty?
+  	self.tags << Tag.create(text: some_tags)
   end
 
 end
