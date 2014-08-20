@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+# Post.destroy_all
+# Post.create(title: 'Children in Vietnam', tag_list: '#NAM', picture: 10.read{Rails.route})

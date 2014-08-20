@@ -18,5 +18,21 @@ RSpec.describe Post, :type => :model do
 				expect(post.tags.first.text).to eq '#WW1'	
 			end		
 		end
+
+		context 'multiple tags' do
+			it 'adds all the tags separately' do
+				post.tag_list = '#WW1, #Vietnam'
+				expect(post.tags.count).to eq 2
+			end
+		end
+
+		context 'with existing tags' do
+			
+			before { Tag.create(text: '#WW1')}
+			it 'reuses them' do
+				post.tag_list = '#WW1, #Vietnam'
+				expect(Tag.count).to eq 2
+			end
+		end
 	end
 end
