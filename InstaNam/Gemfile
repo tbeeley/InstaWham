@@ -9,6 +9,9 @@ gem 'paperclip', github: 'thoughtbot/paperclip'
 
 gem 'aws-sdk'
 
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
+
 
 gem 'rspec-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
