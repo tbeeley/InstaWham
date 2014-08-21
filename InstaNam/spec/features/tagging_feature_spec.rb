@@ -30,4 +30,10 @@ describe 'filtering by tags' do
 			
 		end
 
+		it 'accessible via pretty URLs' do
+			visit '/tags/Youth'
+
+			expect(page).to have_content 'Children in Nam'
+		end
+
 end
