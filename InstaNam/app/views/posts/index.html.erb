@@ -1,3 +1,7 @@
+<h1> InstaWham! </h1>
+<br><%= link_to 'Add new post', new_post_path %></br>
+
+
 <% if @posts.any? %>
   
 	<%= render @posts %>
@@ -6,4 +10,3 @@
 <% else %>
   There are currently no posts
 <% end %>
-<%= link_to 'Add new post', new_post_path %>

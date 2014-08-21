@@ -1,5 +1,6 @@
 class Post < ActiveRecord::Base
   has_attached_file :picture,
+    :styles => { :medium => '400x400>' },
 
     :storage => :s3,
   	:s3_credentials => {
@@ -20,10 +21,6 @@ class Post < ActiveRecord::Base
     some_tags.split(', ').uniq.each do |tag|
   	self.tags << Tag.find_or_create_by(text: tag)
     end
-  end
-
-  def to_param
-    text.delete('#')
   end
 
 end
