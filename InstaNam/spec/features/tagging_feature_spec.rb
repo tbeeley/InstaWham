@@ -12,3 +12,22 @@ describe 'tagging posts' do
       expect(page).to have_link '#Paris'
 	end
 end
+
+describe 'filtering by tags' do
+
+	before do 
+		Post.create(title: 'Children in Nam', tag_list: '#Nam, #Youth')
+		Post.create(title: 'Children in Nam B', tag_list: '#Nam, #Littleuns')
+	end
+
+		it 'filters to show only tagged posts' do
+			visit '/posts'
+			click_link '#Youth'
+
+			expect(page).to have_css 'h1', text: 'Posts tagged with #Youth'
+			expect(page).not_to have_content 'Children in Nam B'
+			expect(page).to have_content 'Children in Nam'
+			
+		end
+
+end

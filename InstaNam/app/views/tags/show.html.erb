@@ -1,5 +1,7 @@
-<% if @posts.any? %>
-  <% @posts.each do |post| %>
+<h1>Posts tagged with <%= @tag.text %></h1>
+
+
+<% @tag.posts.each do |post| %>
     <h3><%= post.title %></h3>
 
   <% if post.picture.present? %>
@@ -10,9 +12,3 @@
   <%= link_to tag.text, tag %>
   <% end %>
 <% end %>
-
-
-<% else %>
-  There are currently no posts
-<% end %>
-<%= link_to 'Add new post', new_post_path %>
