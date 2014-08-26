@@ -1,8 +1,15 @@
 class ChargesController < ApplicationController
 
+	def new
+		@post = Post.find(params[:post_id])
+		render :template => "charges/new"
+	end
+
+
+
 	def create
 		# Amount in cents
-		@amount = 500
+		@amount = "40000"
 
 		customer = Stripe::Customer.create(
 			:email => 'example@stripe.com',
@@ -13,12 +20,13 @@ class ChargesController < ApplicationController
 			:customer    => customer.id,
 			:amount      => @amount,
 			:description => 'Rails Stripe customer',
-			:currency    => 'usd'
+			:currency    => 'gbp'
 		)
 
 	rescue Stripe::CardError => e
 		flash[:error] = e.message
-		redirect_to charges_path
+		redirect_to charge_path
 	end
+
 
 end

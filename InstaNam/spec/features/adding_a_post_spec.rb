@@ -21,6 +21,11 @@ describe 'posts' do
       expect(page).to have_content("Charlie don't surf")
     end
 
+    # it 'should list the price of each post' do
+    #   visit '/posts'
+    #   expect(page).to have_content"10")
+    # end
+
   end
 
   describe 'creating posts' do
@@ -53,6 +58,15 @@ describe 'posts' do
 
       expect(page).to have_content('A brand new post')
       expect(page).to have_css 'img.uploaded-pic'
+    end
+
+    it 'can attach a price to a post' do
+      visit '/posts'
+      click_link('Add new post')
+      fill_in 'post_price', with: '100'
+      click_button 'Create post'
+
+      expect(page).to have_content('$100')
     end
 
 
