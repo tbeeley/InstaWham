@@ -1,6 +1,6 @@
 class Post < ActiveRecord::Base
   has_attached_file :picture,
-    :styles => { :medium => '400x400>' },
+    :styles => { :medium => '1000x1000>' },
 
     :storage => :s3,
   	:s3_credentials => {
