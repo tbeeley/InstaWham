@@ -19,7 +19,7 @@ The aim of this project was to create an Instagram clone, using rails and introd
 
 ##Screenshot
 
-![Picture](./InstaWham/app/assets/screenshot.png)
+![Picture](InstaWham/app/assets/images/screenshot.png)
 
 #How to run it
 
