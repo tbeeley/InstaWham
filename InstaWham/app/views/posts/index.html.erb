@@ -1,0 +1,13 @@
+
+<section class= 'text-center'>
+<br><%= link_to 'Add new post', new_post_path %></br>
+
+<% if @posts.any? %>
+<section class= 'text-center'>
+  
+	<%= render @posts %>
+</section> 
+
+<% else %>
+  There are currently no posts
+<% end %>

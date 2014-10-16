@@ -1,0 +1,11 @@
+  <h1><%= post.title %></h1>
+  <%= link_to "Purchase", new_post_charge_path(post) %>
+  <h4>$<%= post.price %></h4>
+
+  <% if post.picture.present? %>
+    <%= image_tag post.picture.url(:medium), class: 'uploaded-pic' %>
+  <% end %>
+
+  <% post.tags.each do |tag| %>
+  <br><%= link_to tag.text, tag %></br>
+  <% end %>
