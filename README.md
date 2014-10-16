@@ -15,11 +15,16 @@ The aim of this project was to create an Instagram clone, using rails and introd
     * Amazon Web Services
     * Stripe (payments)
     * Twitter bootstrap
-    * Heroku
 
 ##Screenshot
 
 ![Picture](InstaWham/app/assets/images/screenshot.png)
+
+##Still to do:
+
+	* Push to Heroku
+	* Some CSS restyling
+	* Puts rails app to route directory
 
 #How to run it
 
