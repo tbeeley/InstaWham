@@ -32,7 +32,7 @@ The aim of this project was to create an Instagram clone, using rails and introd
 	* cd InstaWham
 	* bundle
 	* bin/rails s
-	* localhost:3000 (in the browser)
+	* localhost:3000
 
 #How to run the tests
 
