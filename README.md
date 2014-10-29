@@ -14,7 +14,7 @@ The aim of this project was to create an Instagram clone, using rails and introd
     * Paperclip
     * Amazon Web Services
     * Stripe (payments)
-    * Twitter bootstrap
+    * Twitter Bootstrap
 
 ##Screenshot
 
