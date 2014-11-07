@@ -1,15 +1,16 @@
 source 'https://rubygems.org'
+ruby '2.0.0'
 
 group :development, :test do
-  gem 'rspec-rails'
-  gem 'capybara'
+	gem 'rspec-rails'
+	gem 'capybara'
 end
 
 gem 'paperclip', github: 'thoughtbot/paperclip'
 
 gem 'aws-sdk'
 
-gem 'bootstrap-sass' 
+gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'launchy'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
