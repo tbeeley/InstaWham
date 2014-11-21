@@ -5,8 +5,6 @@ class ChargesController < ApplicationController
 		render :template => "charges/new"
 	end
 
-
-
 	def create
 		# Amount in cents
 		@amount = "40000"

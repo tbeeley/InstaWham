@@ -23,7 +23,7 @@ describe 'posts' do
 
     end
 
-    describe 'creating posts' do
+    context 'creating posts' do
 
         it 'adds the posts to a form' do
             visit '/posts'
